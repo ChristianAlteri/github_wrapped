@@ -21,7 +21,7 @@ async function fetchBiggestRepoData(username, biggestRepo) {
 function calculateMostFrequentLanguages(data) {
   let [frequencies, highestFrequency, mostFrequentLangs] = [{}, 0, []];
   data.forEach(function (repo) {
-    // console.log('repo', repo);
+    console.log('repo', repo);
     const lang = repo.language;
     if (lang === null) return;
     frequencies[lang] ? frequencies[lang]++ : (frequencies[lang] = 1);
@@ -81,7 +81,7 @@ async function fetchGitHubData(username) {
 }
 
 // Example usage:
-const username = 'adoublef';
+const username = 'ChristianAlteri';
 
 // fetchGitHubRepos(username)
 //   .then((data) => {
